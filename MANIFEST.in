@@ -1,0 +1,4 @@
+include esp_bmgr_py.pth
+include README.md
+recursive-include esp_bmgr_py *.py
+

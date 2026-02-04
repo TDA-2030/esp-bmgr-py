@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "esp-bmgr-py"
+version = "0.1.0"
+description = "ESP Board Manager Python package for idf.py extensions"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "ESP Board Manager Team"},
+]
+keywords = ["esp-idf", "board-manager", "idf.py", "extensions"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "pyyaml>=5.1",
+]
+
+[project.optional-dependencies]
+full = [
+    "idf-component-manager",
+]
+
+[tool.setuptools]
+packages = ["esp_bmgr_py"]
+
+[tool.setuptools.package-data]
+esp_bmgr_py = ["*.pth"]
+
